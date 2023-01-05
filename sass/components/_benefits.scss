@@ -1,0 +1,36 @@
+/* Benefits */
+
+
+.ourbenefits {
+    padding-bottom: 0;
+}
+
+
+.benefits {
+    display: flex;
+}
+
+.benefits__bgd {
+    @include centeredFlex();
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--additional-bgd-color);
+}
+
+.benefits__subtitle {
+    margin-bottom: 10px;
+
+    @include font(14, null, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+.benefits__text {
+    @include font(14, null, 1.71, 0.03em);
+}
+
+.benefits__item  + .benefits__item {
+    margin-left: 30px;
+}

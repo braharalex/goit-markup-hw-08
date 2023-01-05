@@ -1,0 +1,93 @@
+/* Футер */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--secondary-bgd-color);
+}
+
+.footer-main {
+    @include centeredFlex($ai:flex-start, $jc:null);
+    margin-right: auto;
+}
+
+.address-block {
+    margin-right: 70px;
+}
+
+.footer-list .item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address,
+.footer-contacts {
+    font-style: normal;
+    @include font(14, 400, 1.7, null);
+}
+
+.address {
+    color: var(--light-text-color);
+}
+
+.footer-contacts {
+    color: var(--footer-text-color);
+}
+
+
+.soc-block {
+    @include centeredFlex($ai:flex-start, $jc:null);
+    flex-direction: column;
+    margin-right: 93px;
+}
+
+.soc-block__text,
+.subscribe__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.subscribe__form {
+    display: flex;
+}
+
+.subscribe__input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--light-text-color);
+    outline: transparent;
+
+    transition: border-color 250ms var(--primary-cubic-bezier);
+    &:focus,
+    &:hover {
+        border-color: var(--accent-color);
+    }
+
+    &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            @include font(16, 400, 1.25, 0.03em);
+        }
+}
+
+.subscribe__btn {
+    @include centeredFlex();
+    padding: 10px 24px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.subscribe__icon {
+    margin-left: 10px;
+
+    fill: var(--light-text-color);
+}

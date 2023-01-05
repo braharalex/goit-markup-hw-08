@@ -1,0 +1,28 @@
+.primary-btn {
+    padding: 10px 24px;
+    min-width: 200px;
+
+    color: var(--light-text-color);
+    @include font(16, 700, 1.88, 0.06em);
+    background-color: var(--accent-color);
+    border: none;
+
+    transition: background-color 250ms var(--primary-cubic-bezier);
+    &:hover,
+    &:focus {
+            background-color: var(--active-bgd-color);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

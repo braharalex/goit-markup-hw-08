@@ -1,0 +1,37 @@
+/* Team */
+.team {
+    background-color: var(--additional-bgd-color);
+}
+
+.cards {
+    display: flex;
+}
+
+.cards__item {
+    max-width: 270px;
+    width: calc((100% - 90px) / 4);
+    box-shadow: var(--team-shadow);
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+    background-color: var(--primary-bgd-color);
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.cards__text {
+    @include font(16, null, 1.18, 0.03em);
+    text-align: center;
+}
+
+.cards__name {
+    margin-bottom: 10px;
+    padding-top: 30px;
+
+    font-weight: 500;
+    color: var(--title-text-color);
+}
+
+.cards__descr {
+    margin-bottom: 16px;
+}

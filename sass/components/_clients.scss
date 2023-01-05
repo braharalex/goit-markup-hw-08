@@ -1,0 +1,28 @@
+/* Clients  */
+.clients__list {
+    @include centeredFlex();
+}
+
+.clients__item {
+    width: 170px;
+    height: 92px;
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.clients__link {
+    width: 100%;
+    height: 100%;
+    @include centeredFlex();
+    border: 1px solid var(--primary-icon-color);
+    border-radius: 4px;
+
+    color: var(--primary-icon-color);
+    transition: color 250ms var(--primary-cubic-bezier), border-color 250ms var(--primary-cubic-bezier);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}
