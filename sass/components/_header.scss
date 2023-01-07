@@ -1,6 +1,8 @@
 /* Header */
 .header {
     border-bottom: 1px solid var(--header-border-color);
+    position: relative;
+    min-height: 60px;
 }
 
 .main-nav, .sub-nav {
@@ -10,8 +12,11 @@
 }
 
 .site-nav {
-    @media screen and (min-width:768px) {
-        display: flex;        
+    display: flex;
+    @media screen and (max-width:767px) {
+        // margin-bottom: 306px;
+        flex-direction: column;
+        align-items: start;
     }
 }
 
@@ -22,7 +27,9 @@
 }
 
 .site-nav__item + .site-nav__item {
+    @media screen and (min-width:768px) {
     margin-left: 50px;
+    } 
 }
 
 
