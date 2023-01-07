@@ -23,7 +23,7 @@ ul {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -53,14 +53,6 @@ img {
     list-style: none;
 }
 
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -73,10 +65,27 @@ img {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;        
+    }
 }
 
 .icon {
     fill: currentColor;
+}
+
+.title {
+    margin-bottom: 30px;
+    @include font(28, 700, 1.18, null);
+    text-align: center;
+    color: var(--title-text-color);
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+        @include font(36, 500, 1.16, null);        
+    }
 }

@@ -1,4 +1,9 @@
 /* About */
+.about {
+    @media screen and (max-width:1199px) {
+    display: none;    }
+}
+
 .about__list {
     display: flex;
 }
@@ -25,12 +30,4 @@
     line-height: 1.14;
     color: var(--light-text-color);
     background-color: rgba(47, 48, 58, 0.8);
-}
-
-.title {
-    margin-bottom: 50px;
-
-    @include font(36, 500, null, 0.03em);
-    text-align: center;
-    color: var(--title-text-color);
 }

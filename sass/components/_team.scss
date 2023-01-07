@@ -5,18 +5,42 @@
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cards__item {
-    max-width: 270px;
-    width: calc((100% - 90px) / 4);
+    width: 100%;
     box-shadow: var(--team-shadow);
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
     background-color: var(--primary-bgd-color);
     &:not(:last-child) {
-            margin-right: 30px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
         }
+        @media screen and (min-width: 768px) {
+            margin-right: 30px;          
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: calc((100% - 30px) / 2);
+        margin-right: 30px;
+        margin-bottom: 30px;
+    
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        width: calc((100% - 90px) / 4);
+        margin-bottom: 0;
+    }   
 }
 
 .cards__text {

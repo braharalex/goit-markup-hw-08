@@ -7,12 +7,45 @@
 }
 
 .footer-main {
-    @include centeredFlex($ai:flex-start, $jc:null);
-    margin-right: auto;
+    margin-right: auto;  
+
+    @media screen and (max-width:1199px) {
+        @include centeredFlex();
+        flex-direction: column; 
+    }
+
+    @media screen and (min-width:768px) {
+        @include centeredFlex();
+    }
+
+    @media screen and (min-width:1200px) {
+        align-items: start;
+        
+    }
+}
+
+.address-soc-block {
+    @media screen and (min-width:768px) {
+        display: flex;        
+    }   
 }
 
 .address-block {
-    margin-right: 70px;
+    margin-right: 0;
+
+    @media screen and (min-width:768px) {
+        margin-right: 165px;        
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 94px;        
+    }
+}
+
+.address-block, .soc-block {
+    @media screen and (max-width:767px) {
+        margin-bottom: 64px;        
+    }
 }
 
 .footer-list .item:not(:last-child) {
@@ -35,9 +68,13 @@
 
 
 .soc-block {
-    @include centeredFlex($ai:flex-start, $jc:null);
+    @include centeredFlex($jc:null);
     flex-direction: column;
-    margin-right: 93px;
+
+    @media screen and (min-width:1200px) {
+    margin-right: 94px;
+    align-items: flex-start;
+    }
 }
 
 .soc-block__text,
@@ -49,16 +86,27 @@
     color: #ffffff;
 }
 
+.subscribe {
+    @media screen and (max-width:1199px) {
+        display: flex;
+        flex-direction: column; 
+align-items: center;    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-top: 60px;            
+    }
+}
+
 .subscribe__form {
-    display: flex;
+    @media screen and (min-width:1200px) {
+        display: flex;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding: 15px 16px;
-    margin-right: 12px;
-
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -71,16 +119,25 @@
     &:hover {
         border-color: var(--accent-color);
     }
-
     &::placeholder {
             color: rgba(255, 255, 255, 0.6);
             @include font(16, 400, 1.25, 0.03em);
         }
+
+    @media screen and (max-width:1199px) {
+        margin-bottom: 20px;        
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 12px;
+        width: 358px;
+    }
 }
 
 .subscribe__btn {
     @include centeredFlex();
     padding: 10px 24px;
+    margin: 0 auto;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
