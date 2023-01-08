@@ -137,7 +137,17 @@ img {
 .header {
   border-bottom: 1px solid var(--header-border-color);
   position: relative;
-  min-height: 60px;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    min-height: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -188,10 +198,12 @@ img {
   }
 }
 
+.site-nav__link--current {
+  color: var(--accent-color);
+}
 @media screen and (min-width: 768px) {
   .site-nav__link--current {
     position: relative;
-    color: var(--accent-color);
   }
   .site-nav__link--current::after {
     position: absolute;
@@ -488,6 +500,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+}
+@media screen and (max-width: 767px) {
+  .benefits__subtitle {
+    text-align: center;
+  }
 }
 
 .benefits__text {

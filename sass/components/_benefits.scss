@@ -62,6 +62,9 @@
     @include font(14, null, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--title-text-color);
+    @media screen and (max-width:767px) {
+        text-align: center;        
+    }
 }
 
 .benefits__text {
